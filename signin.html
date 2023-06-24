@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/default-skin.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	
+	<link rel="icon" type="image/png" href="img/BING.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="img/BING.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/BING.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/BING.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/BING.png">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Ahmed Hmila">
+	<title>Sign in</title>
+
+</head>
+
+
+<body class="body">
+
+	<div class="sign section--bg" data-bg="img/section/section.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="sign__content">
+						<form action="signin.php" id="myform" name="SIForm" onsubmit="return ValidationForm()" method="post">
+							
+							<a href="home.php" class="sign__logo">
+								<img src="img/logo.png" alt="">
+							</a>
+		
+							<div class="form-group">
+								<input type="email" class="sign__input" placeholder="Email" name="Email">
+							</div>
+							
+		
+							<div class="form-group">
+								<input type="password" class="sign__input" placeholder="Password" name="Password">
+							</div>
+		
+		
+							
+							
+
+							<div class="sign__group sign__group--checkbox">
+								<input id="remember" name="remember" type="checkbox" checked="checked">
+								<label for="remember">Remember Me</label>
+							</div>
+
+							<span class="sign__text">Don't have an account? <a href="signup.html">Sign up!</a></span>
+						  <button  type="submit" id="mainBtn" class="sign__btn" type="button" value="Send" name="Submit" >Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		function ValidationForm() {
+		  let email = document.forms["SIForm"]["Email"];
+		  let pass = document.forms["SIForm"]["Password"];
+		  let user = document.forms["SIForm"]["Bing"];
+
+		
+		 
+		  if (email.value == "") {
+			alert("Please enter a valid e-mail address.");
+			email.focus();
+			return false;
+		  }
+		  
+		  
+		 
+		  if (email.value.indexOf("@", 0) < 0) {
+			alert("Please enter a valid e-mail address.");
+			email.focus();
+			return false;
+		  }
+		  if (email.value.indexOf(".", 0) < 0) {
+			alert("Please enter a valid e-mail address.");
+			email.focus();
+			return false;
+		  }
+
+		  if ((pass.value == "")&& (email.value == "admin@adm.n")){
+			alert("Please enter your admin password");
+			pass.focus();
+			return false;
+		}
+
+		if ((pass.value == "admin")&&(email.value == "admin@adm.n")) {
+			alert("Bienvenu Admin");
+			
+			return true;
+		}
+		  if (pass.value.length < 6) {
+			alert("Password too short");
+			pass.focus();
+			return false;
+		}
+		
+		 
+		
+		 
+		  return true;
+		}
+		
+				
+				
+		
+			function validation(formid){
+			
+			if (ValidationForm())
+				$("#formid").submit();
+			else
+			alert("Validation error");
+			}
+	  </script>
+
+
+
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/wNumb.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/plyr.min.js"></script>
+	<script src="js/jquery.morelines.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/default-skin.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	
+	<link rel="icon" type="image/png" href="img/BING.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="img/BING.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/BING.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/BING.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/BING.png">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Ahmed Hmila">
+	<title>Sign up</title>
+
+</head>
+
+<body class="body">
+
+	<div class="sign section--bg" data-bg="img/section/section.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="sign__content">
+						<form action="signup.php" name="SUForm" onsubmit="return ValidationForm()" method="post">
+							
+							<a href="home.php" class="sign__logo">
+								<img src="img/logo.png" alt="">
+							       </a><div class="form-group">
+								<input type="text" class="sign__input" placeholder="Name"name="Name">
+							</div>
+		
+							<div class="form-group">
+								<input type="email" class="sign__input" placeholder="Email" name="Email">
+							</div>
+							<div class="form-group">
+								<input type="text" class="sign__input" placeholder="Telephone" name="Telephone">
+							</div>
+		
+							<div class="form-group">
+								<input type="password" class="sign__input" placeholder="Password" name="Password">
+							</div>
+		
+							<div class="form-group">
+								<input type="password" class="sign__input" placeholder="Password confirmation " name="Cmdp">
+							</div>
+		
+							
+							
+					
+							<div class="sign__group sign__group--checkbox">
+								<input id="Privacy" name="Privacy" type="checkbox" >
+								<label for="Privacy">I agree to the <a href="#">Privacy Policy</a></label>
+							</div>
+		
+						  <button  type="submit" class="sign__btn" type="button" value="Send" name="Submit">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		function huit_chiffre(f) {
+    return /^[0-9]{8}$/.test(f);
+}
+		function ValidationForm() {
+		  let username = document.forms["SUForm"]["Name"];
+		  let email = document.forms["SUForm"]["Email"];
+		  let pass = document.forms["SUForm"]["Password"];
+		  let phoneNumber = document.forms["SUForm"]["Telephone"];
+		  let pp= document.forms["SUForm"]["Privacy"];
+		  var f=document.forms["SUForm"]["Telephone"].value;
+
+
+		  
+		  if (username.value == "") {
+			alert("Please enter your name.");
+			username.focus();
+			return false;
+		  }
+
+		  if (username.value.length < 3) {
+			alert("Name too short");
+			username.focus();
+			return false;
+		   }
+		   if (username.value.length > 15) {
+			alert("Name too long");
+			username.focus();
+			return false;
+		   }
+		 
+		  if (email.value == "") {
+			alert("Please enter a valid e-mail address.");
+			email.focus();
+			return false;
+		  }
+		  if (email.value.indexOf("@", 0) < 0) {
+			alert("Please enter a valid e-mail address.");
+			email.focus();
+			return false;
+		  }
+		  if (email.value.indexOf(".", 0) < 0) {
+			alert("Please enter a valid e-mail address.");
+			email.focus();
+			return false;
+		  }
+		if (phoneNumber.value == "") {
+			alert("Please enter your telephone number.");
+			phoneNumber.focus();
+			return false;
+		}
+	    if (phoneNumber.value.length < 8) {
+			alert("Phone number too short");
+			phoneNumber.focus();
+			return false;
+		}
+		if (phoneNumber.value.length > 8) {
+			alert("Phone number too long");
+			phoneNumber.focus();
+			return false;
+		}  
+
+		if(!huit_chiffre(f)){
+			alert("Phone number unregoginzed format");
+			phoneNumber.focus();
+			return false;
+		}
+		if (pass.value == "") {
+			alert("Please enter your password");
+			pass.focus();
+			return false;
+		}
+		if (pass.value.length < 6) {
+			alert("Password too short");
+			pass.focus();
+			return false;
+		}
+
+		if(!(pp.checked)){
+			alert("You should agree to our privacy policy");
+			return false;
+		}
+		 
+		  return true;
+		}
+		  
+	  </script>
+
+
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/wNumb.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/plyr.min.js"></script>
+	<script src="js/jquery.morelines.min.js"></script>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

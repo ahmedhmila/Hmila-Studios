@@ -1,0 +1,41 @@
+
+*[FIXED] refresh page after we confirm 
+*[FIXED]resize covers 
+*[FIXED] delete a movie card 
+*[FIXED] adding a card validation form rating format pars
+*[FIXED] fixing the images and how they re stored 
+*[FIXED] 2 genres
+*[FIXED] cant select same  genres
+*[FIXED] community space page where u can add movies to the data base
+*[FiXED] geting the cards from the data base into the community uploads
+*[FIXED] not movies with the same name
+*[FIXED] ADD in the about page
+*[FIXED] Adding a movie form image
+*[Fixed]Adding a card form: 
+    name of the movie 
+    cover[file upload]
+    link
+    rating
+    genre[options box]
+    get the name of the uploader
+*[FIXED] add community posts tab only when logged in
+*[FIXED] filter longer bar
+*[FIXED] filter functions
+*[FIXED] fix nav bar when resizing
+*[FIXED] only watch movies when u re signed in
+*[FiXED] add links to open the movies 
+*[FIXED] ADD complaints table
+*[FIXED] fix see password icon(used css filter)
+*[FIXED] add click on profile to logout
+*[FIXED] Sign in / sign up fct (admin+reg user) php 
+*[FIXED] add on contact us to fill email automatically if logged in
+*[FIXED] recuperer l user name fi blaset l sign in yet7at(add profile icon and name)
+*[FIXED] fix text color in forms
+*[FIXED] form functions re design(signin/signup/contact)
+*[FIXED] fix input number to text 
+*[FIXED] fix navbar icon 
+*[FIXED] ntaalaa opacity mtaa l wheel
+*[FIXED] contactez nous subject issue dropbox 
+*[FIXED] contactz nous LOOK 
+*[FIXED] Length phone number 
+*[FIXED] privacy policy check
